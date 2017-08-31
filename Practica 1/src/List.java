@@ -3,7 +3,7 @@ public interface List<E> {
 	
 	/**
 	 * Inserts the specified element at the beginning of this list.
-	 * @param e the element to add
+	 * @param e the element to add.
 	 */
 	public void addFirst(E e);
 	
@@ -45,7 +45,7 @@ public interface List<E> {
 	 * @throws IndexOutOfBoundsException if the index is out of range (index < 0 || index >= size())
 	 */
 	public E remove(int index);
-            
+	
 	/**
 	 * Removes the first occurrence of the specified element from this list, if it is present.
 	 * If this list does not contain the element, it is unchanged.

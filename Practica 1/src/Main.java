@@ -2,9 +2,9 @@
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("** TEST SINGLY-LINKEDLIST CLASS **");
+		System.out.println("** TEST CIRCULAR DOUBLY-LINKEDLIST CLASS **");
 		System.out.println("\t** USING INTEGERS **");
-		SLinkedList<Integer> iList = new SLinkedList<Integer>();
+		LinkedList<Integer> iList = new LinkedList<Integer>();
 		
 		System.out.println("Testing: addFirst(i | i >= 0 && i < 10) + toString");
 		System.out.println(iList);
@@ -40,10 +40,22 @@ public class Main {
 		
 		System.out.println("Testing: add(2 * i | i >= 0 && i < 10) + toString");
 		System.out.println(iList);
-		for(int i=0; i<10; i++) {
+		for(int i = 0; i < 10; i++) {
 			iList.add(i, i * 2);
 			System.out.println(iList);
 		}
+		System.out.println("Testing: add(4, 7) + toString");
+		iList.add(4, 7);
+		System.out.println(iList);
+		System.out.println("Testing: add(8, 13) + toString");
+		iList.add(8, 13);
+		System.out.println(iList);
+		System.out.println("Testing: add(0, -1) + toString");
+		iList.add(0, -1);
+		System.out.println(iList);
+		System.out.println("Testing: add(size(), 20) + toString");
+		iList.add(iList.size(), 20);
+		System.out.println(iList);
 		System.out.println();
 		
 		System.out.println("Testing: remove(6) + toString");
@@ -100,12 +112,12 @@ public class Main {
 		System.out.println();
 		
 		System.out.println("\t** USING STRINGS **");
-		SLinkedList<String> strLinkedList = new SLinkedList<String>();
+		LinkedList<String> strLinkedList = new LinkedList<String>();
 		strLinkedList.addLast("Hello");
 		strLinkedList.addLast("World");
 		System.out.println(strLinkedList);
 		strLinkedList.remove("World");
 		System.out.println(strLinkedList);
+		System.out.println();
 	}
 }
-
